@@ -537,7 +537,33 @@
     height: 250px;
     margin: 0 auto 30px auto;  /* Add bottom margin for spacing */
   }
+
+  /* 20% reduction in size for basketball text on mobile */
+  .draino-text {
+    font-size: 32px;  /* 20% reduction from 40px */
+  }
   
+  .invitational-text {
+    font-size: 17.6px;  /* 20% reduction from 22px */
+  }
+  
+  .number-text {
+    font-size: 56px;  /* 20% reduction from 70px */
+  }
+  
+  /* Also reduce the stroke width proportionally */
+  .draino-text::before {
+    -webkit-text-stroke: 6.4px #00BFFF;  /* 20% reduction from 8px */
+  }
+  
+  .invitational-text::before {
+    -webkit-text-stroke: 4px #00BFFF;  /* 20% reduction from 5px */
+  }
+  
+  .number-text::before {
+    -webkit-text-stroke: 8px #00BFFF;  /* 20% reduction from 10px */
+  }
+
   /* Make detail cards stack properly and center */
   .details {
     flex-direction: column;
