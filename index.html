@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First Draino Invitational</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      color: white;
+      overflow-x: hidden;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF;
+      color: #fff;
+      background-image: linear-gradient(180deg, #ff3019 0%, #cf0404 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7));
+      margin-top: 20px;
+    }
+    
+    .subtitle {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 0 0 10px #00BFFF;
+    }
+    
+    /* Basketball logo styling */
+    .logo-container {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+      animation: example 2s infinite;
+      filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.8));
+    }
+    
+    /* New basketball styling */
+    .basket-ball {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-color: #e65c00;
+      background: -webkit-radial-gradient(center ellipse, #e65c00 0%, #803300 100%);
+      background: radial-gradient(ellipse at center, #e65c00 0%, #803300 100%);
+      box-sizing: border-box;
+      box-shadow: 10px 20px 25px 10px rgba(0, 0, 0, 0.2);
+      animation: rotate 8s infinite linear;
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .basket-ball:before, .basket-ball:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border: solid 0.6em #0d0d0d;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    
+    .line1 {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-right: solid 0.6em #0d0d0d;
+      box-sizing: border-box;
+      right: 50%;
+    }
+    
+    .line2 {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-top: solid 0.6em #0d0d0d;
+      box-sizing: border-box;
+      top: 50%;
+    }
+    
+    .basket-ball:before {
+      right: 70%;
+    }
+    
+    .basket-ball:after {
+      left: 70%;
+    }
+    
+    /* Logo text adjustments */
+    .logo-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    /* Common styles for all text on basketball */
+    .draino-text, .invitational-text, .number-text {
+      font-family: 'Press Start 2P', cursive;
+      position: relative;
+      color: white;
+      text-align: center;
+      line-height: 1.3;
+      font-weight: bold;
+      text-shadow: 0 0 15px #FF0000, 0 0 25px #FF0000; /* Red glow */
+    }
+    
+    /* DRAINO text */
+    .draino-text {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    
+    .draino-text::before, .invitational-text::before, .number-text::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      color: #00BFFF;
+      -webkit-text-stroke: 8px #00BFFF;
+      text-shadow: none;
+    }
+    
+    .draino-text::before {
+      content: "DRAINO";
+    }
+    
+    /* INVITATIONAL text */
+    .invitational-text {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    
+    .invitational-text::before {
+      content: "INVITATIONAL";
+      -webkit-text-stroke: 5px #00BFFF; /* Slightly smaller outline for smaller text */
+    }
+    
+    /* Number 1 text */
+    .number-text {
+      font-size: 70px;
+    }
+    
+    .number-text::before {
+      content: "1";
+      -webkit-text-stroke: 10px #00BFFF; /* Larger outline for larger number */
+    }
+    
+    .logo {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      display: block;
+      animation: bounce 2s infinite;
+      filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.8));
+    }
+    
+    @keyframes example {
+  0%   {transform: scale(1.0);}
+  25%  {transform: scale(1.05);}
+  50%  {transform: scale(1.0);}
+  75% {transform: scale(1.03);}
+  100%{transform:scale(1.0);}
+}
+    
+    .info-section {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 3px solid #00BFFF;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    }
+    
+    h2 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #00BFFF;
+      text-shadow: 0 0 5px #00BFFF;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    .detail-card {
+      flex: 1;
+      min-width: 250px;
+      background-color: rgba(0, 20, 60, 0.8);
+      border: 2px solid #00BFFF;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+    }
+    
+    .detail-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #00BFFF;
+    }
+    
+    .detail-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    
+    .rsvp-btn {
+      display: block;
+      width: 200px;
+      margin: 40px auto;
+      padding: 15px 25px;
+      background: linear-gradient(45deg, #ff3019 0%, #cf0404 100%);
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 0 15px rgba(255, 48, 25, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .rsvp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 48, 25, 0.9);
+    }
+    
+    .rsvp-btn:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+    
+    @keyframes shine {
+      0% {
+        left: -50%;
+      }
+      100% {
+        left: 150%;
+      }
+    }
+    
+    .countdown {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 30px 0;
+      color: #00BFFF;
+      text-shadow: 0 0 10px #00BFFF;
+    }
+    
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .countdown-number {
+      font-size: 2rem;
+      color: #fff;
+      background-color: rgba(0, 20, 60, 0.8);
+      border: 2px solid #00BFFF;
+      border-radius: 10px;
+      padding: 10px 15px;
+      min-width: 60px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    
+    .countdown-label {
+      margin-top: 5px;
+      font-size: 0.7rem;
+    }
+    
+    .team-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .team {
+      flex: 1;
+      min-width: 300px;
+      max-width: 450px;
+      background-color: rgba(0, 20, 60, 0.8);
+      border: 2px solid #00BFFF;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    }
+    
+    .team h3 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #fff;
+      text-shadow: 0 0 5px #00BFFF;
+    }
+    
+    .team-img {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 3px solid #00BFFF;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-top: 2px solid #00BFFF;
+    }
+    
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    
+    /* Basketball animation */
+    .basketball {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      z-index: -1;
+      opacity: 0.8;
+      animation: float 15s infinite linear;
+    }
+    
+    .basketball .basket-ball-mini {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-color: #e65c00;
+      background: -webkit-radial-gradient(center ellipse, #e65c00 0%, #803300 100%);
+      background: radial-gradient(ellipse at center, #e65c00 0%, #803300 100%);
+      box-sizing: border-box;
+      box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    .basketball .basket-ball-mini:before, .basketball .basket-ball-mini:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border: solid 0.2em #0d0d0d;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    
+    .basketball .mini-line1 {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-right: solid 0.2em #0d0d0d;
+      box-sizing: border-box;
+      right: 50%;
+    }
+    
+    .basketball .mini-line2 {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-top: solid 0.2em #0d0d0d;
+      box-sizing: border-box;
+      top: 50%;
+    }
+    
+    .basketball .basket-ball-mini:before {
+      right: 70%;
+    }
+    
+    .basketball .basket-ball-mini:after {
+      left: 70%;
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(calc(100vw - 100px), 100px) rotate(180deg);
+      }
+      50% {
+        transform: translate(calc(100vw - 150px), calc(100vh - 150px)) rotate(360deg);
+      }
+      75% {
+        transform: translate(100px, calc(100vh - 100px)) rotate(540deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(720deg);
+      }
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1.8rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .logo {
+        width: 200px;
+        height: 200px;
+      }
+      
+      .countdown-timer {
+        flex-wrap: wrap;
+      }
+      
+      .detail-card {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating basketballs -->
+  <div class="basketball" style="top: 10%; left: 10%;">
+    <div class="basket-ball-mini">
+      <div class="mini-line1"></div>
+      <div class="mini-line2"></div>
+    </div>
+  </div>
+  <div class="basketball" style="top: 70%; left: 80%;">
+    <div class="basket-ball-mini">
+      <div class="mini-line1"></div>
+      <div class="mini-line2"></div>
+    </div>
+  </div>
+  <div class="basketball" style="top: 40%; left: 50%;">
+    <div class="basket-ball-mini">
+      <div class="mini-line1"></div>
+      <div class="mini-line2"></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <div class="basket-ball">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+        <div class="logo-text">
+          <div class="draino-text">DRAINO</div>
+          <div class="invitational-text">INVITATIONAL</div>
+          <div class="number-text">1</div>
+        </div>
+      </div>
+      <h1 class="title">The First Draino Invitational</h1>
+      <h2 class="subtitle">30th Birthday Celebration</h2>
+    </div>
+    
+    <div class="countdown">
+      <p>COUNTDOWN TO TIP-OFF</p>
+      <div class="countdown-timer" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-number" id="days">00</div>
+          <div class="countdown-label">DAYS</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="hours">00</div>
+          <div class="countdown-label">HOURS</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="minutes">00</div>
+          <div class="countdown-label">MINUTES</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="seconds">00</div>
+          <div class="countdown-label">SECONDS</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="info-section">
+      <h2>THE MISSION</h2>
+      <p>Welcome to the FIRST EVER Draino Invitational Basketball Tournament! As I turn 30, I'm celebrating my birthday the only way I know how - getting buckets with my dawgs. We can run some cut throat, 5v5, or the Florida drill.</p>
+      <p>Whether you're a basketball pro or just want to come cheer from the sidelines, this is going to be an event you won't want to miss. Bring your A-game!</p>
+    </div>
+    
+    <div class="details">
+      <div class="detail-card">
+        <div class="detail-icon">📅</div>
+        <div class="detail-title">DATE & TIME</div>
+        <p>Friday, April 18, 2025<br>2:00 PM - 4:30 PM</p>
+      </div>
+      
+      <div class="detail-card">
+        <div class="detail-icon">📍</div>
+        <div class="detail-title">LOCATION</div>
+        <p>Christ Presbyterian Academy<br>2323-A Old Hickory Blvd<br>Nashville, TN 37215</p>
+      </div>
+    </div>
+    
+
+    
+    <div class="info-section">
+      <h2>WHAT TO EXPECT</h2>
+      <p>🏀 <strong>Basketball Tournament:</strong> Competitive games with prizes for the champions</p>
+      <p>🎂 <strong>Birthday Celebrations:</strong> Help celebrate Draino's big 3-0 in style</p>
+      <p>🍊 <strong>Food & Drinks:</strong> Fuel up with oranges, gold fish, and Capri Suns</p>
+      <p>👕 <strong>Attire:</strong> Dress in your best bucket attire</p>
+      <p>❌ <strong>No injuries:</strong> So help me God</p>
+    </div>
+    
+    <button class="rsvp-btn">RSVP NOW</button>
+    
+    <footer>
+      <p>© 2025 The First Draino Invitational | Come on and slam, and welcome to the jam!</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Countdown Timer
+    const countdownDate = new Date("April 18, 2025 14:00:00").getTime();
+    
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+      
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "IT'S GAME TIME!";
+      }
+    };
+    
+    updateCountdown();
+    const x = setInterval(updateCountdown, 1000);
+    
+    // RSVP Button
+    document.querySelector('.rsvp-btn').addEventListener('click', function() {
+      window.open('https://www.youtube.com/watch?v=RVhrHk1gmYU', '_blank');
+    });
+  </script>
+</body>
+</html>
