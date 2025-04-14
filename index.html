@@ -516,6 +516,82 @@
       .detail-card {
         min-width: 100%;
       }
+
+/* Improve mobile layout */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Center the logo container on mobile */
+  .logo-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  
+  /* Make detail cards stack properly and center */
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .detail-card {
+    min-width: 90%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+  
+  /* Center countdown timer and allow wrapping */
+  .countdown-timer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .countdown-item {
+    margin: 10px;
+  }
+  
+  /* Make text in all sections centered on mobile */
+  .info-section p {
+    text-align: center;
+  }
+  
+  /* Make the RSVP button slightly smaller */
+  .rsvp-btn {
+    width: 180px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Adjust basketball sizes for better mobile view */
+  .basketball {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Additional overall improvements */
+.detail-title {
+  text-align: center;
+}
+
+.detail-icon {
+  text-align: center;
+}
+
+/* This ensures the countdown stays centered on all devices */
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
     }
   </style>
 </head>
